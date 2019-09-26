@@ -1,0 +1,16 @@
+{
+  "name": "epgi",
+  "version": "1.0.0",
+  "description": "Kamerka i pogoda na EPGI Lisie Kąty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "EPGI",
+    "lisie",
+    "katy"
+  ],
+  "author": "pepson@o2.pl",
+  "license": "ISC"
+}

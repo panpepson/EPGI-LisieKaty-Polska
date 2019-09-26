@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>Lisie EPGI Kamera</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="refresh" content="3000">
+	<meta name="author" content="Piotr Trochymiak vel panPepson">
+	<meta name="description" content="Kamer i pogoda na EPGI Lisie Kąty Grudziądz">
+	<meta name="robots" content="noindex" />
+	<meta name="keywords" content="EPGI, Lisie Katy, Lotnisko Grudziądz">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="fb:app_id" content="229249410789381" />
+	<meta property="og:title" content="Lisie EPGI Kamera" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Kamera i pogoda na EPGI" />
+	<meta property="og:url" content="http://epgi.tk" />
+	<meta property="og:description" content="Kamera i pogoda na EPGI w Lisich Kątach" />
+	<meta property="og:image" content="https://trochymiak.net/i/skrzydlo.jpg" />
+</head>
+<script>
+	function icemik() {
+		var dzisiaj = new Date();
+		var dzionek = '';
+		var dzien = dzisiaj.getDate();
+		var miesiac = dzisiaj.getMonth() + 1;
+		var rok = dzisiaj.getFullYear();
+		var godzina = dzisiaj.getHours();
+		var zmiana = '00';
+		if (miesiac < 10) miesiac = "0" + miesiac;
+		if (godzina < 10) godzina = "0" + godzina;
+		if (godzina >= 13) zmiana = "06";
+		if (godzina >= 19) zmiana = "12";
+		//console.log(dzien);
+		//dzien = dzien - 1;
+		if (dzien < 10) dzionek = "0" + dzien;
+		else dzionek = dzien;
+		document.getElementById("icm").innerHTML = "<img src=\"http://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&fdate=" + rok + miesiac + dzionek + zmiana + "&row=371&col=212&lang=pl\" class=\"responsive\">";
+		//console.log(dzionek);
+	}
+</script>
+
+<body id="myPage" onload="icemik();">
+	<div class="center">
+		<a href="https://www.yr.no/place/Poland/Kuyavian-Pomerania/Grudzi%C4%85dz/" target="_blank">
+			<img src="https://www.yr.no/place/Poland/Kuyavian-Pomerania/Grudzi%C4%85dz/meteogram.png" class="responsive">
+		</a>
+		<br />
+		<iframe src="https://rtsp.me/embed/7iz98eNK/" width='100%' height="500px" frameborder='0' allowfullscreen></iframe>
+		<br />
+		<div id="icm"></div>
+		<br />
+		Model prognoza pogody pochodzi z serwisu <a
+			href="http://www.meteo.pl/um/php/meteorogram_id_um.php?ntype=0u&id=2019">meteo.pl</a> ICM/Uniwersytet Warszawski
+		<br />
+		<a href="https://trochymiak.net" target="_blank">pepson/2o19</a>
+	</div>
+</body>
+<style>
+	.responsive {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	iframe:focus {
+		outline: none;
+	}
+
+	iframe[seamless] {
+		display: block;
+	}
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143793590-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+	gtag('config', 'UA-143793590-1');
+</script>
+
+</html>

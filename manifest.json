@@ -1,0 +1,17 @@
+{
+	"name": "EPGI / kamera pogoda",
+	"short_name": "kamera-pogoda-epgi",
+	"start_url": "https://epgi.tk",
+	"scope": "/",
+	"display": "standalone",
+	"orientation": "portrait-primary",
+	"background_color": "#fff",
+	"theme_color": "#000",
+	"icons": [
+		{
+			"src": "favicon.ico",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
+		}
+	]
+}
