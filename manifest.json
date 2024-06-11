@@ -1,7 +1,7 @@
 {
 	"name": "EPGI / kamera pogoda",
 	"short_name": "kamera-pogoda-epgi",
-	"start_url": "https://epgi.tk",
+	"start_url": "https://epgi.now.sh/",
 	"scope": "/",
 	"display": "standalone",
 	"orientation": "portrait-primary",
